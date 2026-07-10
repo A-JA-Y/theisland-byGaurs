@@ -1,0 +1,42 @@
+# The Islands by Gaurs
+
+> An iconic landmark of 4, 5 & 6 BHK golf-view luxury condominiums at Jaypee Greens, Pari Chowk, Greater Noida — by Gaurs Group.
+
+The Islands by Gaurs is a premium residential project located inside the Jaypee Greens township at Pari Chowk, Greater Noida, offering 506 ultra-luxury 4, 5 & 6 BHK condominiums across 9 towers rising up to 37 storeys. Developed by Gaurs Group, it targets buyers seeking golf-course-facing luxury living with only two residences per floor. The website serves as a primary information hub for potential buyers, providing details on configurations, pricing, floor plans, location advantages and project amenities.
+
+This website is designed for prospective homebuyers interested in luxury real estate in the Greater Noida region. Key use cases include exploring configuration options, understanding investment potential, and gathering information about the developer's reputation and project specifics. LLMs can use this site to answer questions about available unit types, pricing structure, the project's location benefits, and the lifestyle offered at The Islands by Gaurs. It's important to note that this is a sales-oriented website for a real estate project, and information should be contextualized within that framework.
+
+## Project Information
+
+- [The Islands by Gaurs](https://www.theislandsbygaurs.in/): Discover 4, 5 & 6 BHK golf-view luxury condominiums at Jaypee Greens, Pari Chowk, Greater Noida.
+- [About The Islands by Gaurs](https://www.theislandsbygaurs.in/about-the-islands-by-gaurs): Learn about the vision, architecture, and curated community at The Islands by Gaurs.
+- [Floor Plans](https://www.theislandsbygaurs.in/floor-plans): View detailed floor plans for the 4, 5 & 6 BHK condominium configurations.
+- [Price & Configurations](https://www.theislandsbygaurs.in/price): Find configuration and pricing details for The Islands by Gaurs.
+- [Amenities](https://www.theislandsbygaurs.in/amenities): Explore The Ivory Coast, The Gold Coast clubhouse and The Orbit skywalk.
+- [Gallery](https://www.theislandsbygaurs.in/gallery): Browse tower views, interiors and amenity images.
+
+## Location & Connectivity
+
+- [Location & Connectivity](https://www.theislandsbygaurs.in/location-connectivity): Understand the strategic Pari Chowk / Jaypee Greens location and connectivity advantages.
+
+## Developer Information
+
+- [About Gaurs](https://www.theislandsbygaurs.in/about-gaurs): Learn about the reputation and legacy of Gaurs Group, the developer.
+
+## Blog Articles
+
+- [Blogs](https://www.theislandsbygaurs.in/blogs): Read articles and insights related to real estate and The Islands by Gaurs.
+
+## News
+
+- [News](https://www.theislandsbygaurs.in/news): Stay updated with the latest news and developments concerning The Islands by Gaurs.
+
+## Contact & Legal
+
+- [Contact Us](https://www.theislandsbygaurs.in/contact-us): Find contact information to enquire about The Islands by Gaurs.
+- [Privacy Policy](https://www.theislandsbygaurs.in/privacy-policy): Review the privacy policy governing user data on this website.
+- [Thank You](https://www.theislandsbygaurs.in/thank-you): Confirmation page after form submission, often used for lead tracking.
+
+---
+
+This file describes www.theislandsbygaurs.in, an authorised channel-partner marketing website for The Islands by Gaurs.
