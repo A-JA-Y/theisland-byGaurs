@@ -12,13 +12,13 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 
-import g1 from "../assets-islandbygaurs/images/amenities.jpg";
-import g2 from "../assets-islandbygaurs/images/overview.jpg";
-import g3 from "../assets-islandbygaurs/images/location.jpg";
-import g4 from "../assets-islandbygaurs/images/construction.jpg";
-import g5 from "../assets-islandbygaurs/images/specifications.jpg";
-import g6 from "../assets-islandbygaurs/images/golf-1.jpg";
-import studioImg from "../assets-islandbygaurs/images/theislandsbygaurs.jpg";
+import g1 from "../assets-islandbygaurs/images/amenities.webp";
+import g2 from "../assets-islandbygaurs/images/overview.webp";
+import g3 from "../assets-islandbygaurs/images/location.webp";
+import g4 from "../assets-islandbygaurs/images/construction.webp";
+import g5 from "../assets-islandbygaurs/images/specifications.webp";
+import g6 from "../assets-islandbygaurs/images/golf-1.webp";
+import studioImg from "../assets-islandbygaurs/images/theislandsbygaurs.webp";
 
 
 const images = [studioImg, g1, g2, g3, g4, g5, g6];

@@ -5,7 +5,7 @@ import submitForm from "@/api/submitform";
 import { theme } from "@/utils/theme";
 import { InputField, TextareaField } from "@/components/form/InputFields";
 import Image from "next/image";
-import logo from "../assets-islandbygaurs/images/logo-g.png";
+import logo from "../assets-islandbygaurs/images/logo-g.webp";
 
 export default function EnquirySection({
   logoSrc = logo,

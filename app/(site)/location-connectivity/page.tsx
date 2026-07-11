@@ -307,7 +307,7 @@ export default function LocationConnectivityPage() {
                 "breadcrumb": { "@id": "https://www.theislandsbygaurs.in/location-connectivity#breadcrumb" },
                 "about": { "@id": "https://www.theislandsbygaurs.in/#residence" },
                 "mainEntity": { "@id": "https://www.theislandsbygaurs.in/location-connectivity#faq" },
-                "primaryImageOfPage": "https://www.theislandsbygaurs.in/godrej-hero.png",
+                "primaryImageOfPage": "https://www.theislandsbygaurs.in/logo.webp",
                 "inLanguage": "en-IN"
               },
               {
@@ -316,7 +316,7 @@ export default function LocationConnectivityPage() {
                 "name": "The Islands by Gaurs",
                 "description": "4, 5 & 6 BHK golf-view luxury condominiums at Jaypee Greens, Pari Chowk, Greater Noida by Gaurs Group.",
                 "url": "https://www.theislandsbygaurs.in/",
-                "image": "https://www.theislandsbygaurs.in/godrej-hero.png",
+                "image": "https://www.theislandsbygaurs.in/logo.webp",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "Jaypee Greens, Pari Chowk",
@@ -335,8 +335,8 @@ export default function LocationConnectivityPage() {
                 "@id": "https://www.theislandsbygaurs.in/#organization",
                 "name": "The Islands by Gaurs - Channel Partner",
                 "url": "https://www.theislandsbygaurs.in/",
-                "logo": "https://www.theislandsbygaurs.in/godrej-hero.png",
-                "image": "https://www.theislandsbygaurs.in/godrej-hero.png",
+                "logo": "https://www.theislandsbygaurs.in/logo.webp",
+                "image": "https://www.theislandsbygaurs.in/logo.webp",
                 "telephone": "+91-9810890353",
                 "address": {
                   "@type": "PostalAddress",

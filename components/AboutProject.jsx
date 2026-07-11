@@ -3,11 +3,11 @@ import { FaCheck } from "react-icons/fa";
 import Image from "next/image";
 import ImageSlider from "./ImageSlider";
 
-import projectBuilding from "../assets-islandbygaurs/images/overview.jpg";
-import projectBuilding2 from "../assets-islandbygaurs/images/construction.jpg";
-import pic2 from "../assets-islandbygaurs/images/location.jpg";
-import launge from "../assets-islandbygaurs/images/amenities.jpg";
-import township from "../assets-islandbygaurs/images/specifications.jpg";
+import projectBuilding from "../assets-islandbygaurs/images/overview.webp";
+import projectBuilding2 from "../assets-islandbygaurs/images/construction.webp";
+import pic2 from "../assets-islandbygaurs/images/location.webp";
+import launge from "../assets-islandbygaurs/images/amenities.webp";
+import township from "../assets-islandbygaurs/images/specifications.webp";
 
 
 import { useModal } from "./ModalContext";

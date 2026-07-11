@@ -56,7 +56,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "RealEstateAgent",
             name: "The Islands by Gaurs",
-            image: "https://www.theislandsbygaurs.in/godrej-hero.png",
+            image: "https://www.theislandsbygaurs.in/logo.webp",
             "@id": "https://www.theislandsbygaurs.in/",
             url: "https://www.theislandsbygaurs.in/",
             telephone: "+91-9810890353",

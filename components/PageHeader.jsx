@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { siteNavLinks } from "@/data/siteNav";
-import logo150 from "../assets-islandbygaurs/images/logo-g.png";
+import logo150 from "../assets-islandbygaurs/images/logo-g.webp";
 
 const GOLD = "#C49A2B";
 const GOLD_HOVER = "#A8841E";

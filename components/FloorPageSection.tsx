@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import plan1 from "@/assets/tower-1.webp";
-import plan2 from "@/assets/tower-2.webp";
-import plan3 from "@/assets/tower-3.webp";
-import plan4 from "@/assets/tower-4.webp";
-import plan5 from "@/assets/tower-5.webp";
-import masterPlan from "@/assets/tower-6.webp";
+import plan1 from "@/assets-islandbygaurs/images/1.webp";
+import plan2 from "@/assets-islandbygaurs/images/2.webp";
+import plan3 from "@/assets-islandbygaurs/images/3.webp";
+import plan4 from "@/assets-islandbygaurs/images/4.webp";
+import plan5 from "@/assets-islandbygaurs/images/5.webp";
+import masterPlan from "@/assets-islandbygaurs/images/6.webp";
 
 import { useModal } from "./ModalContext";
 

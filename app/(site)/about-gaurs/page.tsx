@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
-import logo from "@/assets/godrej-logo.webp";
+import logo from "@/assets-islandbygaurs/images/logo.webp";
 import StickyDownloadButton from "@/components/StickyButton";
 
 export const metadata: Metadata = {

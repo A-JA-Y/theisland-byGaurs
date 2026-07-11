@@ -159,7 +159,7 @@ export default async function NewsDetail({ params }: { params: Params }) {
       name: "The Islands by Gaurs",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.theislandsbygaurs.in/godrej-hero.png",
+        url: "https://www.theislandsbygaurs.in/logo.webp",
       },
     },
     mainEntityOfPage: {

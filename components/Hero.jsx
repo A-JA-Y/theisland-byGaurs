@@ -1,7 +1,7 @@
 
 import Image from "next/image";
-import heroDesktop from "../assets-islandbygaurs/images/anim-5.jpg";
-import heroMobile from "../assets-islandbygaurs/images/theislandsbygaurs.jpg";
+import heroDesktop from "../assets-islandbygaurs/images/anim-5.webp";
+import heroMobile from "../assets-islandbygaurs/images/theislandsbygaurs.webp";
 
 const Hero = () => {
   return (

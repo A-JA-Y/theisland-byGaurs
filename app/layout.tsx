@@ -28,6 +28,7 @@ const workSans = Work_Sans({
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.theislandsbygaurs.in"),
   title: "The Islands by Gaurs | 4/5/6 BHK Luxury Apartments at Jaypee Greens, Greater Noida",
   description:
     "Discover The Islands by Gaurs — 9 iconic towers of 4, 5 & 6 BHK luxury condominiums at Pari Chowk, Greater Noida. Golf course view, ready amenities, RERA approved.",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.webp",
   },
 
   openGraph: {
@@ -48,9 +49,10 @@ export const metadata: Metadata = {
     siteName: "The Islands by Gaurs",
     images: [
       {
-        url: "https://www.theislandsbygaurs.in/godrej-hero.png",
+        url: "/logo.webp",
         width: 1200,
         height: 630,
+        alt: "The Islands by Gaurs",
       },
     ],
     locale: "en_IN",
@@ -62,7 +64,7 @@ export const metadata: Metadata = {
     title: "The Islands by Gaurs",
     description:
       "4, 5 & 6 BHK golf-view luxury condominiums at Jaypee Greens, Greater Noida.",
-    images: ["https://www.theislandsbygaurs.in/godrej-hero.png"],
+    images: ["/logo.webp"],
   },
 };
 

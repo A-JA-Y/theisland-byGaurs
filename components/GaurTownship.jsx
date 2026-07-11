@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 
-import GolfBase from "../assets-islandbygaurs/images/golf-1.jpg";
-import township from "../assets-islandbygaurs/images/amenities.jpg";
-import building from "../assets-islandbygaurs/images/overview.jpg";
-import city from "../assets-islandbygaurs/images/location.jpg";
-import greenry from "../assets-islandbygaurs/images/construction.jpg";
+import GolfBase from "../assets-islandbygaurs/images/golf-1.webp";
+import township from "../assets-islandbygaurs/images/amenities.webp";
+import building from "../assets-islandbygaurs/images/overview.webp";
+import city from "../assets-islandbygaurs/images/location.webp";
+import greenry from "../assets-islandbygaurs/images/construction.webp";
 
 const cards = [
   {

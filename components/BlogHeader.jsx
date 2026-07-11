@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import logo150 from "../assets-islandbygaurs/images/logo-g.png";
+import logo150 from "../assets-islandbygaurs/images/logo-g.webp";
 
 const menuItems = [
   { label: "HOME", href: "/" },

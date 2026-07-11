@@ -2,31 +2,31 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import projectBuilding from "@/assets/Project-Building.webp";
-import projectBuilding2 from "@/assets/Project-Building-2.JPG.webp";
-import tower1 from "@/assets/tower-1.webp";
-import tower2 from "@/assets/tower-2.webp";
-import tower3 from "@/assets/tower-3.webp";
-import tower4 from "@/assets/tower-4.webp";
-import tower5 from "@/assets/tower-5.webp";
+import projectBuilding from "@/assets-islandbygaurs/images/overview.webp";
+import projectBuilding2 from "@/assets-islandbygaurs/images/theislandsbygaurs.webp";
+import tower1 from "@/assets-islandbygaurs/images/1.webp";
+import tower2 from "@/assets-islandbygaurs/images/2.webp";
+import tower3 from "@/assets-islandbygaurs/images/3.webp";
+import tower4 from "@/assets-islandbygaurs/images/4.webp";
+import tower5 from "@/assets-islandbygaurs/images/5.webp";
 
-import g1 from "@/assets/g-1.webp";
-import g2 from "@/assets/g-2.webp";
-import g3 from "@/assets/g-3.webp";
-import g4 from "@/assets/g-4.webp";
-import g5 from "@/assets/g-5.webp";
-import g6 from "@/assets/g-6.webp";
-import pic2 from "@/assets/pic-2.webp";
-import launge from "@/assets/launge.webp";
-import swpic3 from "@/assets/swpic-3.webp";
-import golfClub from "@/assets/golf-club.webp";
+import g1 from "@/assets-islandbygaurs/images/amenities.webp";
+import g2 from "@/assets-islandbygaurs/images/location.webp";
+import g3 from "@/assets-islandbygaurs/images/construction.webp";
+import g4 from "@/assets-islandbygaurs/images/specifications.webp";
+import g5 from "@/assets-islandbygaurs/images/golf-1.webp";
+import g6 from "@/assets-islandbygaurs/images/6.webp";
+import pic2 from "@/assets-islandbygaurs/images/7.webp";
+import launge from "@/assets-islandbygaurs/images/8.webp";
+import swpic3 from "@/assets-islandbygaurs/images/9.webp";
+import golfClub from "@/assets-islandbygaurs/images/10.webp";
 
-import golf9 from "@/assets/9-golf.webp";
-import township from "@/assets/township.webp";
-import greenry from "@/assets/60-greenry.webp";
-import acre100 from "@/assets/100acre.webp";
-import premiumLifestyle from "@/assets/premium-lifestyle.webp";
-import communityLiving from "@/assets/community-living.webp";
+import golf9 from "@/assets-islandbygaurs/images/11.webp";
+import township from "@/assets-islandbygaurs/images/12.webp";
+import greenry from "@/assets-islandbygaurs/images/13.webp";
+import acre100 from "@/assets-islandbygaurs/images/14.webp";
+import premiumLifestyle from "@/assets-islandbygaurs/images/15.webp";
+import communityLiving from "@/assets-islandbygaurs/images/16.webp";
 
 const groups = [
   {

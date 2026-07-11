@@ -16,6 +16,10 @@ const withBundleAnalyzer = bundleAnalyzer({
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 
+  images: {
+    qualities: [75, 80],
+  },
+
   allowedDevOrigins: ["192.168.29.216"],
 
   async redirects() {

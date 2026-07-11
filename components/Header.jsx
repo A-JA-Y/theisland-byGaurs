@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-import logo150 from "../assets-islandbygaurs/images/logo-g.png";
+import logo150 from "../assets-islandbygaurs/images/logo-g.webp";
 
 const menuItems = [
   { label: "OVERVIEW", href: "#overview" },

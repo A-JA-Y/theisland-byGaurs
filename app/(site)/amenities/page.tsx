@@ -5,6 +5,7 @@ import PageBanner from "@/components/PageBanner";
 import Amenities from "@/components/Amenities";
 import ModalWrapper from "@/components/ModalWrapper";
 import StickyDownloadButton from "@/components/StickyButton";
+import amenitiesHero from "@/assets-islandbygaurs/images/amenities.webp";
 
 export const metadata: Metadata = {
   title: "Amenities at The Islands by Gaurs | Clubhouse, Skywalk & Outdoor Zones",
@@ -138,7 +139,7 @@ export default function AmenitiesPage() {
       <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/100acre.webp"
+            src={amenitiesHero}
             alt="The Islands by Gaurs Amenities - Jaypee Greens, Greater Noida"
             fill
             priority
