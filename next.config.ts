@@ -1,5 +1,6 @@
 import createMDX from "@next/mdx";
 import bundleAnalyzer from "@next/bundle-analyzer";
+import { NextConfig } from "next";
 
 const withMDX = createMDX({
   options: {
@@ -12,12 +13,15 @@ const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+
+const nextConfig: NextConfig = {
+  output:"export",
+
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 
   images: {
     qualities: [75, 80],
+    unoptimized:true
   },
 
   allowedDevOrigins: ["192.168.29.216"],
