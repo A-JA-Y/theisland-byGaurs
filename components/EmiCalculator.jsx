@@ -15,14 +15,14 @@ function SliderField({ label, min, max, step, value, onChange, pillLabel, rightL
         </div>
       </div>
 
-      <div className="relative h-9">
+      <div className="relative h-9 group/slider">
         <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-gray-200 -translate-y-1/2 rounded" />
         <div
-          className="absolute top-1/2 left-0 h-[2px] bg-gray-900 -translate-y-1/2 rounded"
+          className="absolute top-1/2 left-0 h-[2px] bg-[#DCA54A] -translate-y-1/2 rounded transition-all duration-150"
           style={{ width: `${fillWidth}%` }}
         />
         <div
-          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white border border-gray-200 rounded-full px-2.5 py-1 text-xs font-semibold whitespace-nowrap pointer-events-none text-gray-900"
+          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white border border-[#DCA54A]/50 shadow-sm rounded-full px-2.5 py-1 text-xs font-semibold whitespace-nowrap pointer-events-none text-gray-900 transition-transform duration-200 group-hover/slider:scale-110"
           style={{ left: `${pillLeft}%` }}
         >
           {pillLabel}
@@ -62,11 +62,21 @@ export default function EmiCalculator() {
   const downAmt = loan * downPercent / 100;
 
   return (
-    <section className="w-full min-h-screen bg-[#FAF8F4] flex justify-center items-start p-6 box-border">
-      <div className="w-full max-w-[480px] bg-white p-6 rounded-2xl shadow-[0_2px_20px_rgba(0,0,0,0.07)]">
-        <h3 className="text-[11px] font-bold tracking-[0.1em] uppercase mb-6 text-gray-900">
+    <section className="w-full bg-[#FAF8F4] flex flex-col items-center py-16 px-6 box-border" id="emi-calculator">
+      <div className="text-center mb-10">
+        <h6 className="uppercase text-xs tracking-widest text-[#DCA54A] mb-3" data-reveal>
+          Plan Your Investment
+        </h6>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900" data-reveal data-reveal-delay="1">
           EMI Calculator
-        </h3>
+        </h2>
+      </div>
+
+      <div
+        className="w-full max-w-[480px] bg-white p-6 rounded-2xl shadow-[0_18px_50px_-20px_rgba(44,31,14,0.3)] border border-[rgba(196,154,43,0.15)] transition-shadow duration-500 hover:shadow-[0_24px_60px_-18px_rgba(196,154,43,0.35)]"
+        data-reveal="zoom"
+        data-reveal-delay="2"
+      >
 
         {/* Loan Amount */}
         <div className="mb-6">
@@ -135,7 +145,11 @@ export default function EmiCalculator() {
             Estimated Monthly EMI
           </p>
           <div className="flex items-baseline gap-1.5">
-            <span className="text-[clamp(26px,6vw,36px)] font-bold text-gray-900">
+            <span
+              key={emi}
+              className="text-[clamp(26px,6vw,36px)] font-bold text-[#B8892A] inline-block"
+              style={{ animation: "fadeUp 0.35s ease both" }}
+            >
               {fmt(emi)}
             </span>
             <span className="text-gray-400 text-sm">₹ / month</span>

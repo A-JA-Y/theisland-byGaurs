@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Work_Sans } from "next/font/google";
+import { Inter, Work_Sans, Marcellus } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import "lite-youtube-embed/src/lite-yt-embed.css";
@@ -22,6 +22,14 @@ const workSans = Work_Sans({
   adjustFontFallback: true,
   weight: ["600"],
   preload: false,
+});
+
+const marcellus = Marcellus({
+  subsets: ["latin"],
+  variable: "--font-marcellus",
+  display: "swap",
+  adjustFontFallback: true,
+  weight: ["400"],
 });
 
 
@@ -69,6 +77,7 @@ export const metadata: Metadata = {
 };
 
 import { ModalProvider } from "@/components/ModalContext";
+import ScrollAnimations from "@/components/ScrollAnimations";
 
 export default function RootLayout({
   children,
@@ -79,7 +88,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable}  h-full antialiased light `}
+      className={`${inter.variable} ${workSans.variable} ${marcellus.variable} h-full antialiased light `}
     >
       <Analytics />
       <Script id="google-tag-manager" strategy="afterInteractive">
@@ -106,6 +115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
+        <ScrollAnimations />
         <ModalProvider>
           {children}
         </ModalProvider>

@@ -18,12 +18,14 @@ export default function VillaFeatures() {
       id="investment-benefits"
     >
       <div className="max-w-5xl mx-auto">
-        <h6 className="text-center uppercase mb-3" style={{ color: "#c8922a", letterSpacing: "2.5px", fontSize: "11px", fontWeight: 600 }}>
+        <h6 className="text-center uppercase mb-3" style={{ color: "#c8922a", letterSpacing: "2.5px", fontSize: "11px", fontWeight: 600 }} data-reveal>
           For the chosen few
         </h6>
         <h2
           className="text-center font-bold text-gray-900 mb-10"
           style={{ fontSize: "clamp(1.4rem, 3.5vw, 2rem)", lineHeight: "1.25", color: "#2c1f0e" }}
+          data-reveal
+          data-reveal-delay="1"
         >
           Residence Features & Investment Highlights
         </h2>
@@ -31,7 +33,7 @@ export default function VillaFeatures() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
           {/* Card 1 — Interiors */}
-          <div className="bg-white p-7" style={{ borderTop: "3px solid #DCA54A" }}>
+          <div className="card-lift bg-white p-7 rounded-b-lg" style={{ borderTop: "3px solid #DCA54A" }} data-reveal data-reveal-delay="1">
             <p style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "2px", color: "#c8922a", textTransform: "uppercase", marginBottom: "8px" }}>
               Interiors & Design
             </p>
@@ -61,7 +63,7 @@ export default function VillaFeatures() {
           </div>
 
           {/* Card 2 — Space & Layout */}
-          <div className="bg-white p-7" style={{ borderTop: "3px solid #DCA54A" }}>
+          <div className="card-lift bg-white p-7 rounded-b-lg" style={{ borderTop: "3px solid #DCA54A" }} data-reveal data-reveal-delay="2">
             <p style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "2px", color: "#c8922a", textTransform: "uppercase", marginBottom: "8px" }}>
               Space & Layout
             </p>
@@ -87,7 +89,7 @@ export default function VillaFeatures() {
           </div>
 
           {/* Card 3 — Social Infrastructure */}
-          <div className="bg-white p-7" style={{ borderTop: "3px solid #DCA54A" }}>
+          <div className="card-lift bg-white p-7 rounded-b-lg" style={{ borderTop: "3px solid #DCA54A" }} data-reveal data-reveal-delay="3">
             <p style={{ fontSize: "10px", fontWeight: 600, letterSpacing: "2px", color: "#c8922a", textTransform: "uppercase", marginBottom: "8px" }}>
               Social Infrastructure
             </p>

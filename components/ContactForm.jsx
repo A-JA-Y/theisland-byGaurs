@@ -71,12 +71,15 @@ const ContactForm = () => {
 };
 
   const inputClass = (hasError) =>
-    `w-full px-4 py-3 text-sm border rounded-md outline-none placeholder-gray-400 text-gray-700 transition-colors duration-200 focus:border-[#c8952a] focus:ring-1 focus:ring-[#c8952a] ${
-      hasError ? "border-red-500" : "border-gray-300"
+    `input-luxe w-full px-4 py-3 text-sm border rounded-md outline-none placeholder-gray-400 text-gray-700 ${
+      hasError ? "border-red-500" : "border-gray-300 hover:border-[#d8c69a]"
     }`;
 
   return (
-    <div className="bg-white rounded-xl shadow-lg px-5 md:p-[55px] py-6 w-full">
+    <div
+      className="bg-white rounded-xl shadow-[0_18px_50px_-20px_rgba(44,31,14,0.35)] border border-[rgba(196,154,43,0.15)] px-5 md:p-[55px] py-6 w-full"
+      data-reveal="zoom"
+    >
 
       <div className="flex flex-col md:flex-row md:items-center gap-6">
 
@@ -153,9 +156,16 @@ const ContactForm = () => {
             <button
               onClick={handleSubmit}
               disabled={loading}
-              className="w-full md:w-auto bg-[#c8952a] hover:bg-[#b07d1f] text-white text-sm font-semibold tracking-widest uppercase px-6 py-3 rounded-md transition-colors duration-300 whitespace-nowrap"
+              className="btn-sheen w-full md:w-auto bg-[#c8952a] hover:bg-[#b07d1f] text-white text-sm font-semibold tracking-widest uppercase px-6 py-3 rounded-md whitespace-nowrap disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              {loading ? "Submitting..." : "Book Site Visit"}
+              {loading ? (
+                <span className="inline-flex items-center gap-2">
+                  <span className="w-3.5 h-3.5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                  Submitting...
+                </span>
+              ) : (
+                "Book Site Visit"
+              )}
             </button>
           </div>
 

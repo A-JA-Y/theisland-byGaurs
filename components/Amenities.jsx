@@ -19,9 +19,13 @@ import g4 from "../assets-islandbygaurs/images/construction.webp";
 import g5 from "../assets-islandbygaurs/images/specifications.webp";
 import g6 from "../assets-islandbygaurs/images/golf-1.webp";
 import studioImg from "../assets-islandbygaurs/images/theislandsbygaurs.webp";
+import openAirTheatre from "../assets-islandbygaurs/images/18.webp";
+import celebrationPavilion from "../assets-islandbygaurs/images/19.webp";
+import bowlingAlley from "../assets-islandbygaurs/images/20.webp";
+import workstationPods from "../assets-islandbygaurs/images/17.webp";
 
 
-const images = [studioImg, g1, g2, g3, g4, g5, g6];
+const images = [studioImg, g1, g2, g3, g4, g5, g6, openAirTheatre, celebrationPavilion, bowlingAlley, workstationPods];
 import ImageSlider from "@/components/ImageSlider";
 
 
@@ -74,12 +78,17 @@ export default function Amenities() {
         
         {/* Heading */}
         <div className="text-center">
-          <h6 className="text-[#DCA54A] uppercase mb-4">
+          <h6 className="text-[#DCA54A] uppercase mb-4" data-reveal>
             Three Worlds of Luxury
           </h6>
-          <h2 className="text-[#FDE6C0] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-3xl mx-auto">
+          <h2
+            className="text-[#FDE6C0] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-3xl mx-auto"
+            data-reveal
+            data-reveal-delay="1"
+          >
             Curated Amenities Across The Ivory Coast, The Gold Coast &amp; The Orbit
           </h2>
+          <div className="gold-divider mt-6" data-reveal data-reveal-delay="2" />
         </div>
 
         {/* Content */}
@@ -95,8 +104,13 @@ export default function Amenities() {
 
             <ul className="flex flex-col gap-[18px]">
               {amenities.map((item, i) => (
-                <li key={i} className="flex items-center gap-4">
-                  <span className="flex-shrink-0 text-lg text-[#DCA54A]">
+                <li
+                  key={i}
+                  className="row-nudge flex items-center gap-4"
+                  data-reveal
+                  data-reveal-delay={String(Math.min((i % 5) + 1, 5))}
+                >
+                  <span className="icon-pop flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-full border border-[rgba(220,165,74,0.4)] bg-[rgba(220,165,74,0.1)] text-base text-[#DCA54A]">
                     {item.icon}
                   </span>
                   <span className="text-sm md:text-base">{item.text}</span>
@@ -109,10 +123,10 @@ export default function Amenities() {
               day, you&apos;ll never need to leave the gates.
             </p>
 
-            <div className="mt-3">
+            <div className="mt-3" data-reveal>
               <button
                 onClick={() => openModal()}
-                className="inline-block bg-[#c9a84c] text-[#fff] text-xs rounded-[8px] font-bold uppercase px-7 py-3 cursor-pointer hover:bg-[#b8933e] transition"
+                className="btn-sheen inline-block bg-[#c9a84c] text-[#fff] text-xs rounded-[8px] font-bold uppercase px-7 py-3 cursor-pointer"
               >
                 Know More
               </button>
@@ -120,9 +134,9 @@ export default function Amenities() {
           </div>
 
           {/* Right Image */}
-         <div className="w-full lg:w-[50%]  h-[300px] md:h-[550px] flex-shrink-0">
-  <ImageSlider images={images} />
-</div>
+          <div className="w-full lg:w-[50%] h-[300px] md:h-[550px] flex-shrink-0" data-reveal="right">
+            <ImageSlider images={images} />
+          </div>
 
         </div>
       </div>

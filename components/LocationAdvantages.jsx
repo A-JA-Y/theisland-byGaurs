@@ -114,12 +114,12 @@ export default function LocationAdvantages() {
       <div className="max-w-5xl mx-auto">
 
         {/* Label */}
-        <p className="text-center text-xs font-bold uppercase mb-4 text-[#c8922a] tracking-[0.2em]">
+        <p className="text-center text-xs font-bold uppercase mb-4 text-[#c8922a] tracking-[0.2em]" data-reveal>
           Location & Connectivity
         </p>
 
         {/* Heading */}
-        <h2 className="text-center font-bold text-gray-900 mb-14 text-3xl md:text-4xl leading-tight">
+        <h2 className="text-center font-bold text-gray-900 mb-14 text-3xl md:text-4xl leading-tight" data-reveal data-reveal-delay="1">
           The Epicenter of Greater Noida
         </h2>
 
@@ -127,7 +127,7 @@ export default function LocationAdvantages() {
         <div className="flex flex-col lg:flex-row gap-12 items-start">
 
           {/* LEFT: TEXT */}
-          <div className="flex-1 max-w-lg">
+          <div className="flex-1 max-w-lg" data-reveal="left">
 
             <h3 className="font-bold text-gray-900 mb-3 text-base">
               Strategic Connectivity
@@ -143,10 +143,10 @@ export default function LocationAdvantages() {
 
             <ul className="space-y-4">
               {checkItems.map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  
+                <li key={i} className="row-nudge flex items-start gap-3">
+
                   {/* Check Icon */}
-                  <span className="text-[#c8922a] mt-1">
+                  <span className="icon-pop flex-shrink-0 w-5 h-5 mt-0.5 flex items-center justify-center rounded-full bg-[rgba(200,146,42,0.12)] text-[#c8922a] text-[11px]">
                     ✓
                   </span>
 
@@ -159,8 +159,8 @@ export default function LocationAdvantages() {
           </div>
 
           {/* RIGHT: MAP */}
-          <div className="flex-1 w-full">
-            <div className="w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-md border border-[#e5dcc5]">
+          <div className="flex-1 w-full" data-reveal="right">
+            <div className="w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-md border border-[#e5dcc5] transition-shadow duration-500 hover:shadow-xl">
               <iframe
                 src="https://maps.google.com/maps?q=Jaypee+Greens+Pari+Chowk+Greater+Noida&output=embed"
                 width="100%"
@@ -176,7 +176,7 @@ export default function LocationAdvantages() {
               href="https://maps.google.com/maps?q=Jaypee+Greens+Pari+Chowk+Greater+Noida"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-3 text-sm text-[#c8922a] hover:underline"
+              className="link-underline inline-block mt-3 text-sm text-[#c8922a]"
             >
               View on Google Maps →
             </a>

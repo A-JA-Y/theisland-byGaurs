@@ -34,13 +34,14 @@ export default function PlansSection() {
 
         {/* Heading */}
         <div className="text-center">
-          <h6 className="uppercase text-xs tracking-widest text-[#DCA54A] mb-3">
+          <h6 className="uppercase text-xs tracking-widest text-[#DCA54A] mb-3" data-reveal>
             Floor Plans
           </h6>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900" data-reveal data-reveal-delay="1">
             Layouts Designed Around the Way You Live
           </h2>
+          <div className="gold-divider mt-6" data-reveal data-reveal-delay="2" />
         </div>
 
         {/* FLOOR PLAN GRID */}
@@ -48,7 +49,9 @@ export default function PlansSection() {
           {plans.map((img, i) => (
             <div
               key={i}
-              className="relative rounded-md overflow-hidden shadow-md group cursor-pointer"
+              className="card-lift relative rounded-md overflow-hidden shadow-md group cursor-pointer"
+              data-reveal
+              data-reveal-delay={String(i + 1)}
               onClick={() => {
                 if (!isUnlocked) {
                   openModal();
@@ -66,7 +69,10 @@ export default function PlansSection() {
               />
 
               {!isUnlocked && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 text-white text-xs">
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 bg-black/45 text-white text-xs transition-colors duration-300 group-hover:bg-black/60">
+                  <span className="w-7 h-7 flex items-center justify-center rounded-full border border-white/60 bg-white/10 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                    🔒
+                  </span>
                   Unlock
                 </div>
               )}
@@ -78,18 +84,20 @@ export default function PlansSection() {
         <div className="flex flex-col items-center text-center mt-6">
 
           {/* Sub heading */}
-          <h6 className="text-xl md:text-2xl font-semibold  mb-2 text-[#dca54a]">
+          <h6 className="text-xl md:text-2xl font-semibold  mb-2 text-[#dca54a]" data-reveal>
             Master Plan
           </h6>
 
-          <p className="text-gray-600 text-sm mb-6 max-w-lg">
+          <p className="text-gray-600 text-sm mb-6 max-w-lg" data-reveal data-reveal-delay="1">
             Get a complete overview of the 9-tower boulevard layout including
             the golf course frontage, amenity zones, and infrastructure planning.
           </p>
 
           {/* Card */}
           <div
-            className="relative w-full md:w-[70%] rounded-lg overflow-hidden shadow-lg cursor-pointer group"
+            data-reveal="zoom"
+            data-reveal-delay="2"
+            className="card-lift relative w-full md:w-[70%] rounded-lg overflow-hidden shadow-lg cursor-pointer group"
             onClick={() => {
               if (!isUnlocked) {
                 openModal();
@@ -111,13 +119,13 @@ export default function PlansSection() {
                 {isUnlocked ? "Click to View & Download" : "Unlock to Access"}
               </p>
 
-              <button className="mt-4 bg-[#DCA54A] text-white text-xs px-6 py-2 rounded uppercase">
+              <button className="btn-sheen mt-4 bg-[#DCA54A] text-white text-xs px-6 py-2 rounded uppercase">
                 {isUnlocked ? "View Plan" : "Unlock Now"}
               </button>
             </div>
 
             {/* Premium badge */}
-            <span className="absolute top-3 left-3 bg-[#DCA54A] text-white text-[10px] px-2 py-1 rounded">
+            <span className="pulse-gold absolute top-3 left-3 bg-[#DCA54A] text-white text-[10px] px-2 py-1 rounded">
               Premium
             </span>
           </div>
@@ -126,11 +134,17 @@ export default function PlansSection() {
 
       {/* FLOOR PLAN MODAL */}
       {activePlan && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="relative bg-white p-3 rounded-lg max-w-3xl w-full">
+        <div
+          className="backdrop-in fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+          onClick={() => setActivePlan(null)}
+        >
+          <div
+            className="modal-in relative bg-white p-3 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setActivePlan(null)}
-              className="absolute top-2 right-2 text-black text-xl"
+              className="absolute top-2 right-2 w-8 h-8 flex items-center justify-center rounded-full text-black text-xl hover:bg-gray-100 hover:rotate-90 transition-all duration-300"
             >
               ✕
             </button>
@@ -146,12 +160,18 @@ export default function PlansSection() {
 
       {/* MASTER PLAN MODAL */}
       {isMasterOpen && (
-        <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
-          <div className="relative bg-white p-4 rounded-lg max-w-4xl w-full text-center">
+        <div
+          className="backdrop-in fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+          onClick={() => setIsMasterOpen(false)}
+        >
+          <div
+            className="modal-in relative bg-white p-4 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
 
             <button
               onClick={() => setIsMasterOpen(false)}
-              className="absolute top-2 right-2 text-black text-xl"
+              className="absolute top-2 right-2 w-8 h-8 flex items-center justify-center rounded-full text-black text-xl hover:bg-gray-100 hover:rotate-90 transition-all duration-300"
             >
               ✕
             </button>

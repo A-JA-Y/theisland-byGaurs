@@ -4,11 +4,9 @@ import { useRouter } from "next/navigation";
 import submitForm from "@/api/submitform";
 import { theme } from "@/utils/theme";
 import { InputField, TextareaField } from "@/components/form/InputFields";
-import Image from "next/image";
-import logo from "../assets-islandbygaurs/images/logo-g.webp";
+import BrandLogo from "./BrandLogo";
 
 export default function EnquirySection({
-  logoSrc = logo,
   logoAlt = "The Islands by Gaurs",
   heading = "27+ Years Of Unfaltering Commitment",
   body = "At The Islands by Gaurs, luxury isn't just built — it's beautifully lived. We don't just create structures; we craft timeless experiences that become cherished memories. With every heaven-piercing tower we design, our commitment to excellence climbs higher, delivering not just homes, but lifestyles defined by elegance and distinction. Only 506 condominiums, only two per floor — spaces shaped for those who choose to live apart. Step into a world where luxury knows no limits — step into the enduring legacy of Gaurs.",
@@ -69,22 +67,15 @@ export default function EnquirySection({
         {/* Left: Brand info */}
         <div className="flex flex-col gap-5 md:w-1/2">
           {/* Logo */}
-          <div className="max-w-[300px] md:w-[50%]">
-            <Image
-              src={logoSrc}
-              alt={logoAlt}
-              width={100}
-              height={89}
-              className="w-auto object-contain self-start max-w-[100px]"
-              priority
-            />
+          <div data-reveal aria-label={logoAlt}>
+            <BrandLogo size="lg" animated={false} />
           </div>
 
           {/* Heading */}
-          <h4 className={`${theme.textPrimary} font-semibold`}>{heading}</h4>
+          <h4 className={`${theme.textPrimary} font-semibold`} data-reveal data-reveal-delay="1">{heading}</h4>
 
           {/* Body */}
-          <p className={`${theme.fontBody} ${theme.textSecondary}`}>{body}</p>
+          <p className={`${theme.fontBody} ${theme.textSecondary}`} data-reveal data-reveal-delay="2">{body}</p>
 
           <hr className="border-[#C8BFA0] w-[30%] mt-2 hidden lg:block" />
         </div>
@@ -92,7 +83,7 @@ export default function EnquirySection({
         <hr className="border-[#C8BFA0] my-6 lg:hidden" />
 
         {/* Right: Enquiry form */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2" data-reveal="right">
           {submitted ? (
             <div className="flex flex-col items-center justify-center h-full gap-4 py-16 text-center">
               <svg className="w-12 h-12 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -145,14 +136,20 @@ export default function EnquirySection({
                     type="submit"
                     disabled={loading}
                     className={[
-                      "px-7 py-2.5 rounded bg-[#DCA54A]",
+                      "btn-sheen px-7 py-2.5 rounded bg-[#DCA54A]",
                       theme.fontButton,
-                      "text-white uppercase",
-                      "transition-colors duration-200",
+                      "text-white uppercase cursor-pointer",
                       loading ? "opacity-70 cursor-not-allowed" : ""
                     ].join(" ")}
                   >
-                    {loading ? "Submitting..." : "Submit"}
+                    {loading ? (
+                      <span className="inline-flex items-center gap-2">
+                        <span className="w-3.5 h-3.5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                        Submitting...
+                      </span>
+                    ) : (
+                      "Submit"
+                    )}
                   </button>
                 </div>
               </form>

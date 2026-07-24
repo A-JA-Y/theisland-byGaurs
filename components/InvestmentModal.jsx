@@ -78,17 +78,18 @@ const link = document.createElement("a");
   return (
     /* Backdrop */
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
+      className="backdrop-in fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
       onClick={(e) => e.target === e.currentTarget && onClose?.()}
     >
-      {/* pum-container: Modal Box — dark black border, white bg */}
+      {/* pum-container: Modal Box */}
       <div
         className="
-          pum-container relative bg-white
-          w-[90%] lg:w-[40%]
-          border-4 border-black
-          rounded-lg shadow-2xl
-          p-8
+          modal-in pum-container relative bg-white
+          w-[92%] sm:w-[80%] lg:w-[40%] max-w-lg
+          border-t-4 border-[#C49A2B]
+          rounded-xl shadow-2xl
+          p-6 sm:p-8
+          max-h-[90vh] overflow-y-auto
         "
       >
         {/* pum-content */}
@@ -182,7 +183,7 @@ const link = document.createElement("a");
                       placeholder="Email ID *"
                       aria-required="true"
                     />
-                    <FaEnvelope className="absolute right-3 top-1/2 -translate-y-1/2 text-teal-600 text-base pointer-events-none" />
+                    <FaEnvelope className="absolute right-3 top-1/2 -translate-y-1/2 text-[#C49A2B] text-base pointer-events-none" />
                   </div>
                   {errors.email && (
                     <div className="srfm-error-wrap mt-1">
@@ -221,7 +222,7 @@ const link = document.createElement("a");
                 onClick={handleSubmit}
                 disabled={loading}
                 id="srfm-submit-btn"
-                className={`srfm-btn-frontend srfm-button srfm-submit-button bg-[#c8952a] hover:bg-[#b07d1f] text-white text-sm font-semibold tracking-widest uppercase px-6 py-3 rounded-md transition-colors duration-300 ${loading ? "opacity-70 cursor-not-allowed" : ""
+                className={`btn-sheen srfm-btn-frontend srfm-button srfm-submit-button bg-[#c8952a] hover:bg-[#b07d1f] text-white text-sm font-semibold tracking-widest uppercase px-6 py-3 rounded-md cursor-pointer ${loading ? "opacity-70 cursor-not-allowed" : ""
                   }`}
               >
                 <div className="srfm-submit-wrap">
@@ -241,10 +242,10 @@ const link = document.createElement("a");
           className="
             pum-close popmake-close
             absolute -top-3 -right-3
-            w-7 h-7 rounded-full
-            bg-gray-800 text-white text-xs font-bold
+            w-8 h-8 rounded-full
+            bg-[#2c1f0e] text-white text-xs font-bold
             flex items-center justify-center
-            hover:bg-gray-600 transition-colors duration-200
+            hover:bg-[#C49A2B] hover:rotate-90 transition-all duration-300
             z-10
           "
         >
