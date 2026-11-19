@@ -1,0 +1,5 @@
+# Cloudflare static-asset redirects (copied into ./out by `next build`).
+# Mirrors the redirects() in next.config.ts, which Next can't apply to a static export.
+/about-godrej-golf-links   /about-the-islands-by-gaurs   301
+/about-godrej-properties   /about-gaurs                  301
+/villas-configurations     /price                        301

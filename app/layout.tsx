@@ -90,7 +90,8 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${workSans.variable} ${marcellus.variable} h-full antialiased light `}
     >
-      <Analytics />
+      {/* Vercel Web Analytics only exists on Vercel hosting; on Cloudflare its script 404s. */}
+      {process.env.VERCEL ? <Analytics /> : null}
       <Script id="google-tag-manager" strategy="afterInteractive">
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

@@ -394,4 +394,93 @@ html.reveal-ready [data-reveal][data-reveal-delay="6"] { transition-delay: 0.6s;
     opacity: 1;
     transform: none;
   }
+  .plan-draw *,
+  .plan-draw text { animation-delay: 0s !important; }
 }
+
+/* ---------------------------------- */
+/*  Buyer guide pages                  */
+/* ---------------------------------- */
+
+@keyframes heroDrift {
+  from { transform: scale(1.04) translate3d(0, 0, 0); }
+  to   { transform: scale(1.14) translate3d(-2%, -1.5%, 0); }
+}
+
+.guide-hero-img {
+  animation: heroDrift 22s ease-in-out infinite alternate;
+  transform-origin: 60% 40%;
+}
+
+.font-display {
+  font-family: var(--font-marcellus), var(--font-work-sans), serif;
+}
+
+/* Glass chip used over imagery */
+.glass-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(246, 231, 193, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Long-form article typography */
+.guide-prose {
+  color: #3b3b3b;
+  font-size: 1.0625rem;
+  line-height: 1.85;
+}
+.guide-prose > * + * { margin-top: 1.15rem; }
+.guide-prose strong { color: #1a1a1a; font-weight: 600; }
+.guide-prose a {
+  color: #a8841e;
+  text-decoration: underline;
+  text-decoration-color: rgba(196, 154, 43, 0.4);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.guide-prose a:hover { color: #7a5f12; text-decoration-color: currentColor; }
+
+/* Gold diamond bullet list */
+.diamond-list > li {
+  position: relative;
+  padding-left: 1.6rem;
+}
+.diamond-list > li + li { margin-top: 0.7rem; }
+.diamond-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+
+/* FAQ accordion */
+.faq-item summary { list-style: none; cursor: pointer; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item .faq-icon { transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1); }
+.faq-item[open] .faq-icon { transform: rotate(45deg); }
+.faq-item[open] { border-color: rgba(196, 154, 43, 0.55); box-shadow: 0 14px 34px -22px rgba(44, 31, 14, 0.45); }
+
+/* Animated floor-plan outline (hero decoration) */
+.plan-draw path,
+.plan-draw rect,
+.plan-draw line {
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+  animation: drawLine 3.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+}
+.plan-draw .delay-1 { animation-delay: 1.2s; }
+.plan-draw .delay-2 { animation-delay: 2s; }
+
+/* Table polish */
+.guide-table th { font-weight: 600; }
+.guide-table tbody tr { transition: background-color 0.25s ease; }
+.guide-table tbody tr:hover { background: rgba(196, 154, 43, 0.06); }
+
+/* Horizontal scroller without visible scrollbar */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
