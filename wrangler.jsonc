@@ -1,0 +1,33 @@
+/**
+ * Cloudflare Workers config for The Islands by Gaurs.
+ *
+ * The site is a fully static Next.js export (`output: "export"` in next.config.ts),
+ * so Cloudflare serves it as Workers Static Assets. There is no Worker script.
+ *
+ *   npm run cf:preview   build, then serve ./out locally on http://localhost:8787
+ *   npm run cf:deploy    build, then upload ./out to Cloudflare
+ *
+ * Redirects and response headers live in public/_redirects and public/_headers.
+ * Next copies both into ./out at build time, and Cloudflare applies them.
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "theislandsbygaurs",
+  "compatibility_date": "2026-11-01",
+
+  "assets": {
+    // Output folder of `next build` when output is "export".
+    "directory": "./out",
+    // Serves /price from price.html and redirects /price/ to /price.
+    "html_handling": "auto-trailing-slash",
+    // Unknown paths get Next's generated 404.html with a 404 status.
+    "not_found_handling": "404-page"
+  }
+
+  // To serve on the production domain, add the zone to your Cloudflare account,
+  // then uncomment:
+  // ,"routes": [
+  //   { "pattern": "www.theislandsbygaurs.in", "custom_domain": true },
+  //   { "pattern": "theislandsbygaurs.in", "custom_domain": true }
+  // ]
+}
