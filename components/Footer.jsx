@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { footerNavLinks } from "@/data/siteNav";
 import { networkSites } from "@/data/networkSites";
+import { buyerGuides } from "@/data/guidesData";
 
 export default function Footer() {
   const half = Math.ceil(footerNavLinks.length / 2);
@@ -20,6 +21,21 @@ export default function Footer() {
             <p className="text-gray-400 text-xs leading-relaxed">
               4, 5 & 6 BHK golf-view luxury condominiums at Jaypee Greens, Pari Chowk, Greater Noida by Gaurs Group.
             </p>
+            <p className="text-[#c9a84c] text-[11px] font-semibold tracking-widest uppercase mt-5 mb-3">
+              Buyer Guides
+            </p>
+            <ul className="flex flex-col gap-2">
+              {buyerGuides.map((guide) => (
+                <li key={guide.href}>
+                  <Link
+                    href={guide.href}
+                    className="link-underline text-gray-300 text-xs hover:text-[#DCA54A] transition-colors"
+                  >
+                    {guide.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Quick Links — two sub-columns */}
