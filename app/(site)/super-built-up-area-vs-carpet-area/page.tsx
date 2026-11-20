@@ -725,7 +725,7 @@ export default function CarpetAreaPage() {
         waMessage="Hi, please share the cost sheet and carpet area for a home at The Islands by Gaurs."
       />
 
-      <RelatedGuides items={[relatedPool.villaVsFlat, relatedPool.buyersGuide, relatedPool.floorPlans, relatedPool.price]} />
+      <RelatedGuides items={[relatedPool.villaVsFlat, relatedPool.rentVsBuy, relatedPool.floorPlans, relatedPool.price]} />
 
       <StickyDownloadButton />
     </>
