@@ -2,6 +2,7 @@ import villaHero from "@/assets-islandbygaurs/images/guides/villa-vs-flat-hero.w
 import carpetHero from "@/assets-islandbygaurs/images/guides/carpet-area-blueprint-hero.webp";
 import golfFacade from "@/assets-islandbygaurs/images/guides/islands-golf-course-facade.webp";
 import nightView from "@/assets-islandbygaurs/images/guides/islands-night-pari-chowk.webp";
+import rentVsBuyHero from "@/assets-islandbygaurs/images/guides/rent-vs-buy-keys-hero.webp";
 import type { StaticImageData } from "next/image";
 
 export const SITE_URL = "https://www.theislandsbygaurs.in";
@@ -15,6 +16,10 @@ export const buyerGuides = [
   {
     href: "/super-built-up-area-vs-carpet-area",
     label: "Super Built-Up Area vs Carpet Area",
+  },
+  {
+    href: "/rent-vs-buy-house-greater-noida",
+    label: "Rent vs Buy House in Greater Noida",
   },
 ];
 
@@ -43,6 +48,14 @@ export const relatedPool: Record<string, RelatedItem> = {
     tag: "Buyer guide",
     image: carpetHero,
     imageAlt: "Architect drawing a floor plan",
+  },
+  rentVsBuy: {
+    href: "/rent-vs-buy-house-greater-noida",
+    title: "Rent vs Buy House in Greater Noida",
+    excerpt: "₹1.3 lakh rent vs EMI at 25%, 50% and full payment on a ₹9 crore golf-side home, with costs, tax and break-even.",
+    tag: "Buyer guide",
+    image: rentVsBuyHero,
+    imageAlt: "A model house and a set of keys on a wooden table",
   },
   buyersGuide: {
     href: "/blogs/the-islands-by-gaurs-jaypee-greens-buyers-guide-2026",

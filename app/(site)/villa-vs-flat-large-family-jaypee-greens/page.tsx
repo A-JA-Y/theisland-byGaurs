@@ -938,7 +938,7 @@ export default function VillaVsFlatPage() {
       />
 
       <RelatedGuides
-        items={[relatedPool.carpetArea, relatedPool.buyersGuide, relatedPool.pariChowk, relatedPool.floorPlans]}
+        items={[relatedPool.carpetArea, relatedPool.rentVsBuy, relatedPool.buyersGuide, relatedPool.floorPlans]}
       />
 
       <StickyDownloadButton />
