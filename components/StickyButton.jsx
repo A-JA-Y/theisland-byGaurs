@@ -21,11 +21,11 @@ export default function StickyDownloadButton() {
 
   return (
     <>
-      {/* Side brochure tab — raised above the mobile CTA bar on small screens */}
+      {/* Side brochure tab — raised above the floating Call/WhatsApp buttons and the mobile CTA bar */}
       <button
         onClick={handleClick}
         className="
-          fixed bottom-[130px] md:bottom-16 right-0
+          fixed bottom-56 right-0
           flex flex-col items-center justify-center
           bg-[#c8952a] text-white font-semibold
           shadow-lg transition-all duration-300
