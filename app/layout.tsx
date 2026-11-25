@@ -45,10 +45,6 @@ export const metadata: Metadata = {
     canonical: "https://www.theislandsbygaurs.in/",
   },
 
-  icons: {
-    icon: "/logo.webp",
-  },
-
   openGraph: {
     title: "The Islands by Gaurs",
     description:
@@ -78,6 +74,7 @@ export const metadata: Metadata = {
 
 import { ModalProvider } from "@/components/ModalContext";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import FloatingContactButtons from "@/components/FloatingContactButtons";
 
 export default function RootLayout({
   children,
@@ -120,6 +117,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ModalProvider>
           {children}
         </ModalProvider>
+        {/* On phones, sits above the sticky Call / WhatsApp / Enquire bar (components/StickyButton.jsx). */}
+        <FloatingContactButtons
+          phone="+91 98108 90353"
+          message="Hi, I am interested in The Islands by Gaurs at Jaypee Greens, Greater Noida. Please share the details."
+          callClassName="bg-[#141004] hover:bg-[#2b230b]"
+          className="bottom-[calc(4.5rem+env(safe-area-inset-bottom))] right-4 md:bottom-6 md:right-6"
+        />
       </body>
     </html>
   );
