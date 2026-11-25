@@ -4,6 +4,8 @@ module.exports = {
   siteUrl: "https://www.theislandsbygaurs.in",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
+  // App Router icon files (app/icon.png, app/apple-icon.png) build as routes; they are not pages
+  exclude: ["/icon.png", "/apple-icon.png"],
   // Static export: write sitemap.xml / robots.txt into the deployed folder (./out),
   // which is what Cloudflare serves (see wrangler.jsonc).
   outDir: "out",
