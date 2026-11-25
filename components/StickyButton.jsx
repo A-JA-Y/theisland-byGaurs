@@ -21,11 +21,15 @@ export default function StickyDownloadButton() {
 
   return (
     <>
-      {/* Side brochure tab — raised above the floating Call/WhatsApp buttons and the mobile CTA bar */}
+      {/* Side brochure tab — raised above the floating Call/WhatsApp buttons and the mobile CTA bar.
+          On short screens (phones held sideways) bottom-56 would push it into the header's menu
+          button, so it drops level with the floating buttons, which step in beside it (app/layout.tsx). */}
       <button
         onClick={handleClick}
         className="
           fixed bottom-56 right-0
+          max-md:[@media(max-height:500px)]:bottom-[calc(4.5rem+env(safe-area-inset-bottom))]
+          md:[@media(max-height:500px)]:bottom-6
           flex flex-col items-center justify-center
           bg-[#c8952a] text-white font-semibold
           shadow-lg transition-all duration-300
