@@ -44,7 +44,6 @@ import lakeImg from "@/assets-islandbygaurs/images/guides/islands-lake-golf-view
 import nightImg from "@/assets-islandbygaurs/images/guides/islands-night-pari-chowk.webp";
 import facadeImg from "@/assets-islandbygaurs/images/guides/islands-golf-course-facade.webp";
 import villaLawnImg from "@/assets-islandbygaurs/images/guides/villa-garden-lawn.webp";
-import villaPoolImg from "@/assets-islandbygaurs/images/guides/private-villa-pool.webp";
 import templeImg from "@/assets-islandbygaurs/images/neighbourhood-2.webp";
 import orbitImg from "@/assets-islandbygaurs/images/9.webp";
 import ivoryImg from "@/assets-islandbygaurs/images/17.webp";
@@ -839,7 +838,7 @@ export default function VillaVsFlatPage() {
             If a Villa Suits You Better
           </SectionHeading>
         </div>
-        <div className="mx-auto grid max-w-5xl gap-6 px-5 md:grid-cols-2 md:px-6">
+        <div className="mx-auto grid max-w-xl gap-6 px-5 md:px-6">
           {[
             {
               href: "https://thelegacybygaurs.com/",
@@ -847,13 +846,6 @@ export default function VillaVsFlatPage() {
               text: "Also by Gaurs Group and also in Jaypee Greens, with four towers and 20 Legacy Villas.",
               img: villaLawnImg,
               alt: "A contemporary villa with a lawn and a large tree",
-            },
-            {
-              href: "https://www.godrejgolflink.in/villas-configurations",
-              name: "Godrej Golf Links villas",
-              text: "4 and 5 BHK villas near Pari Chowk.",
-              img: villaPoolImg,
-              alt: "A modern villa with a private pool",
             },
           ].map((v, i) => (
             <a
